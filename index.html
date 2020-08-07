@@ -800,25 +800,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <script src="js/bootstrap.js"></script>
 <textarea id="textarea">
-	 <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbyzoJQqfpISY0H6b5bO55ZUr-XI18yAz96NKWgejUn3vPJVlBIb/exec",
-                data:$("#submit-form").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                    //window.location.href="https://google.com"
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-    </script>
-
 </body>
 </html>
