@@ -504,7 +504,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center text-white">Contact Me Now</h3>
 
                 <div class="contact_grid_right">
-                    <form id="gform" action="https://script.google.com/macros/s/AKfycbzoIsbf-kvgkbx8qtuwCXZykQux-N6q5aLd3HkxLQ/exec" method="post">
+                    <form id="submit-form" action="">
                         <div class="row contact_left_grid">
                             <div class="col-md-6 con-left" data-aos="fade-up">
                                 <div class="form-group">
@@ -799,7 +799,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //js -->
 
     <script src="js/bootstrap.js"></script>
-
+<script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzoIsbf-kvgkbx8qtuwCXZykQux-N6q5aLd3HkxLQ/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
