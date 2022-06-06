@@ -1,3 +1,4 @@
+//
 ;(function (factory) {
 	"use strict";
 
@@ -178,3 +179,5 @@
 		});
 	};
 });
+
+//
